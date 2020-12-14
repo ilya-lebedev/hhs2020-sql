@@ -1,0 +1,4 @@
+DROP TABLE resume CASCADE;
+DROP TABLE vacancy CASCADE;
+DROP TABLE employer CASCADE;
+DROP TABLE negotiation CASCADE;
