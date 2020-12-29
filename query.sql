@@ -6,6 +6,7 @@ WHERE compensation_from IS NULL
 ORDER BY created DESC
 LIMIT 10;
 
+
 SELECT min(compensation_from)                   AS min_salary,
        max(compensation_to)                     AS max_salary,
        avg(compensation_to - compensation_from) AS avg_salary_range
@@ -21,3 +22,33 @@ FROM (
                     ELSE compensation_from
                     END AS compensation_from
          FROM vacancy v) as ctcf;
+
+
+SELECT e.name, count(e.name) AS negotations
+FROM employer e
+         INNER JOIN vacancy v ON e.id = v.employer_id
+         INNER JOIN negotiation n on v.id = n.vacancy_id
+GROUP BY e.name
+ORDER BY negotations DESC, e.name
+LIMIT 5;
+
+
+WITH empl_vac AS (
+    SELECT e.name AS company_name, count(e.id) AS vacancies
+    FROM employer e
+             LEFT JOIN vacancy v ON e.id = v.employer_id
+    GROUP BY company_name
+)
+SELECT company_name, percentile_cont(0.5) WITHIN GROUP ( ORDER BY vacancies )
+FROM empl_vac
+GROUP BY company_name;
+
+
+SELECT v.area_id,
+       min(n.created - v.created),
+       max(n.created - v.created)
+FROM vacancy v
+         RIGHT JOIN negotiation n on v.id = n.vacancy_id
+GROUP BY v.area_id
+ORDER BY v.area_id;
+

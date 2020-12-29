@@ -125,3 +125,22 @@ INSERT INTO vacancy
 (id, title, area_id, created, compensation_from, compensation_to, compensation_gross, employer_id)
 VALUES (24, 'Sales manager', 17, '2020-01-22', null, null, false, 7);
 
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (1, 1, 1, '2020-01-22');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (2, 24, 15, '2020-05-28');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (3, 23, 10, '2020-04-11');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (4, 23, 2, '2020-10-08');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (5, 3, 12, '2020-10-08');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (6, 7, 19, '2020-10-08');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (7, 9, 22, '2020-10-08');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (8, 15, 10, '2020-10-08');
+INSERT INTO negotiation (id, vacancy_id, resume_id, created)
+VALUES (9, 4, 18, '2020-03-28');
+
