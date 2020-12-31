@@ -28,6 +28,18 @@ INSERT INTO resume (id, title)
 VALUES (14, 'Pawnbroker');
 INSERT INTO resume (id, title)
 VALUES (15, 'Barman');
+INSERT INTO resume (id, title)
+VALUES (16, 'Sales manager');
+INSERT INTO resume (id, title)
+VALUES (17, 'Surgeon');
+INSERT INTO resume (id, title)
+VALUES (18, 'Veterinarian');
+INSERT INTO resume (id, title)
+VALUES (19, 'Secretary');
+INSERT INTO resume (id, title)
+VALUES (20, 'Pawnbroker');
+INSERT INTO resume (id, title)
+VALUES (21, 'Barman');
 
 INSERT INTO employer (id, name)
 VALUES (1, 'Apple');
@@ -138,7 +150,7 @@ VALUES (5, 3, 12, '2020-10-08');
 INSERT INTO negotiation (id, vacancy_id, resume_id, created)
 VALUES (6, 7, 19, '2020-10-08');
 INSERT INTO negotiation (id, vacancy_id, resume_id, created)
-VALUES (7, 9, 22, '2020-10-08');
+VALUES (7, 9, 20, '2020-10-08');
 INSERT INTO negotiation (id, vacancy_id, resume_id, created)
 VALUES (8, 15, 10, '2020-10-08');
 INSERT INTO negotiation (id, vacancy_id, resume_id, created)
