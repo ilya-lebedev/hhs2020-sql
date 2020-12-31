@@ -63,6 +63,8 @@ INSERT INTO employer (id, name)
 VALUES (10, 'ExxonMobil');
 INSERT INTO employer (id, name)
 VALUES (11, 'McKesson');
+INSERT INTO employer (id, name)
+VALUES (12, 'Mc');
 
 INSERT INTO vacancy
 (id, title, area_id, created, compensation_from, compensation_to, compensation_gross, employer_id)
@@ -136,6 +138,9 @@ VALUES (23, 'Barman', 19, '2019-11-05', null, null, true, 9);
 INSERT INTO vacancy
 (id, title, area_id, created, compensation_from, compensation_to, compensation_gross, employer_id)
 VALUES (24, 'Sales manager', 17, '2020-01-22', null, null, false, 7);
+INSERT INTO vacancy
+(id, title, area_id, created, compensation_from, compensation_to, compensation_gross, employer_id)
+VALUES (25, 'Sales manager', 17, '2020-01-22', null, null, false, 12);
 
 INSERT INTO negotiation (id, vacancy_id, resume_id, created)
 VALUES (1, 1, 1, '2020-01-22');

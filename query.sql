@@ -24,10 +24,10 @@ FROM (
          FROM vacancy v) as ctcf;
 
 
-SELECT e.name, count(e.name) AS negotations
+SELECT e.name, count(n.id) AS negotations
 FROM employer e
          INNER JOIN vacancy v ON e.id = v.employer_id
-         INNER JOIN negotiation n on v.id = n.vacancy_id
+         LEFT JOIN negotiation n on v.id = n.vacancy_id
 GROUP BY e.id, e.name
 ORDER BY negotations DESC, e.name
 LIMIT 5;
